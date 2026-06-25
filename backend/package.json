@@ -1,0 +1,16 @@
+{
+  "name": "feedforward-backend",
+  "version": "1.0.0",
+  "description": "Backend for Food Redistribution Mini Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^4.22.1",
+    "nodemailer": "^7.0.13"
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Approved Food Requests</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="donate-bg">
+
+  <h2>Approved Food Requests</h2>
+
+  <!-- REQUIRED CONTAINER -->
+  <div id="availableRequests" class="food-grid"></div>
+
+  <!-- SCRIPT FILE -->
+  <script src="js/script.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      loadAvailableRequests();
+    });
+  </script>
+
+  <!-- 🌟 Popup -->
+  <div id="popup" class="popup-overlay">
+    <div class="popup-box">
+      <div id="popupIcon">✔</div>
+      <h3 id="popupTitle">Success</h3>
+      <p id="popupMessage">Done successfully</p>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  </div>
+
+</body>
+</html>

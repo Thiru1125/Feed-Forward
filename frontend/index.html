@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Redistribution | FeedForward</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="home-bg">
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="logo">FeedForward</div>
+
+    <nav class="nav-links">
+        <a href="index.html" class="nav-btn active">Home</a>
+        <a href="about.html" class="nav-btn">About Us</a>
+        <a href="login.html" class="nav-btn">Login</a>
+        <a href="register.html" class="nav-btn">Register</a>
+        <a href="food-list.html" class="nav-btn">Food List</a>
+        <a href="profile.html" class="nav-btn">Profile</a>
+        <a href="approved-requests.html" class="nav-btn">Available Requests</a>
+
+    </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero-section">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1>Food Should Feed People, Not Bins</h1>
+        <h2>Together, We Can End Food Waste</h2>
+
+        <p>
+            Every day, good food is wasted while many go hungry.
+FeedForward ensures excess food reaches those who need it most.
+
+        </p>
+
+        <div class="hero-buttons">
+            <a href="donate.html" class="hero-btn primary">Donate Food</a>
+            <a href="request-food.html" class="hero-btn secondary">Request Food</a>
+
+        </div>
+
+        <div class="hero-trust">
+            ⭐ 500+ meals redistributed | 🤝 30+ NGOs
+        </div>
+    </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="how-it-works">
+    <h2>How It Works</h2>
+
+    <div class="steps">
+        <div class="card">
+            <h3>🍱 Donate</h3>
+            <p>Share details of excess food available.</p>
+        </div>
+        <div class="card">
+            <h3>🚚 Connect</h3>
+            <p>NGOs accept and arrange pickup.</p>
+        </div>
+        <div class="card">
+            <h3>❤️ Distribute</h3>
+            <p>Food reaches people in need.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<div class="stats-section">
+  <div class="stats-card">
+    <div class="stats-icon">🍽️</div>
+    <div>
+      <div class="stats-value">500+</div>
+      <div class="stats-label">Meals Donated</div>
+    </div>
+  </div>
+
+  <div class="stats-card">
+    <div class="stats-icon">🙋‍♂️</div>
+    <div>
+      <div class="stats-value">120+</div>
+      <div class="stats-label">Active Donors</div>
+    </div>
+  </div>
+
+  <div class="stats-card">
+    <div class="stats-icon">🤝</div>
+    <div>
+      <div class="stats-value">30+</div>
+      <div class="stats-label">Partner NGOs</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>© 2026 FeedForward | Food Redistribution Mini Project</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+<script>
+  const adminInput = document.getElementById("adminSecret");
+  if (adminInput) {
+    adminInput.style.display = "none";
+  }
+</script>
+<!-- 🌟 Custom Popup -->
+<div id="popup" class="popup-overlay">
+  <div class="popup-box">
+    <div id="popupIcon">✔</div>
+    <h3 id="popupTitle">Success</h3>
+    <p id="popupMessage">Done successfully</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+
+</body>
+</html>

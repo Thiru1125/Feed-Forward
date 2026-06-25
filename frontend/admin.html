@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard | FeedForward</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="admin-bg">
+
+<!-- ✅ ADMIN AUTH CHECK (FIXED) -->
+<script>
+  const user = JSON.parse(localStorage.getItem("userProfile"));
+
+  if (!user || user.role !== "Admin") {
+    alert("Access Denied! Please login as Admin.");
+    window.location.href = "login.html";
+  }
+</script>
+
+<header class="admin-header">
+  <div class="admin-title">
+    <h1>Admin Dashboard</h1>
+    <p>Manage food donations & requests</p>
+  </div>
+
+  <button onclick="logoutAdmin()" class="logout-btn">Logout</button>
+</header>
+
+<!-- ===== DASHBOARD COUNTERS ===== -->
+<div class="stats-bar">
+  <div class="stat-card pending">
+    <span class="stat-icon">⏳</span>
+    <div>
+      <h3 id="pendingCount">0</h3>
+      <p>Pending</p>
+    </div>
+  </div>
+
+  <div class="stat-card approved">
+    <span class="stat-icon">✅</span>
+    <div>
+      <h3 id="approvedCount">0</h3>
+      <p>Approved</p>
+    </div>
+  </div>
+
+  <div class="stat-card booked">
+    <span class="stat-icon">📌</span>
+    <div>
+      <h3 id="bookedCount">0</h3>
+      <p>Booked</p>
+    </div>
+  </div>
+</div>
+
+<main class="admin-main">
+
+  <section class="admin-section">
+    <h2>Food Donations</h2>
+    <div id="adminFoodList" class="admin-food-grid"></div>
+  </section>
+
+  <section class="admin-section">
+    <h2>Food Requests</h2>
+    <div id="adminRequestList" class="admin-food-grid"></div>
+  </section>
+
+</main>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="js/script.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    loadAdminFood();
+    loadFoodRequests(); // ✅ correct function name
+  });
+</script>
+
+<!-- 🌟 Custom Popup -->
+<div id="popup" class="popup-overlay">
+  <div class="popup-box">
+    <div id="popupIcon">✔</div>
+    <h3 id="popupTitle">Success</h3>
+    <p id="popupMessage">Done successfully</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+<!-- ❌ CONFIRM MODAL -->
+<div id="confirmModal" class="confirm-overlay">
+  <div class="confirm-box">
+    <h3>⚠ Confirm Rejection</h3>
+    <p>This action cannot be undone.</p>
+
+    <div class="confirm-actions">
+      <button id="confirmYes" class="btn-reject">Yes, Reject</button>
+      <button onclick="closeConfirm()" class="btn-cancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

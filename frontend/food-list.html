@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food List | FeedForward</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="food-list-bg" onload="loadFoodList()">
+
+  <h2>Available Food</h2>
+
+  <div id="foodList" class="food-list"></div>
+
+  <script src="js/script.js"></script>
+
+  <!-- 🌟 Popup -->
+  <div id="popup" class="popup-overlay">
+    <div class="popup-box">
+      <div id="popupIcon">✔</div>
+      <h3 id="popupTitle">Success</h3>
+      <p id="popupMessage">Done successfully</p>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  </div>
+
+</body>
+</html>

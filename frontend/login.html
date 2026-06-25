@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login | FeedForward</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-bg">
+
+<div class="login-container">
+    <h2>Welcome Back</h2>
+    <p class="login-subtext">Login to continue helping reduce food waste</p>
+
+    <form onsubmit="loginUser(event)">
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script src="js/script.js"></script>
+<!-- 🌟 Custom Popup -->
+<div id="popup" class="popup-overlay">
+  <div class="popup-box">
+    <div id="popupIcon">✔</div>
+    <h3 id="popupTitle">Success</h3>
+    <p id="popupMessage">Done successfully</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+</body>
+</html>

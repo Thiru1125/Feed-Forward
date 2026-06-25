@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Thiru",
+    "email": "leo123@gmail.com",
+    "password": "1234",
+    "role": "Donor"
+  },
+  {
+    "name": "pranesh",
+    "email": "kpranesh@gmail.com",
+    "password": "834477",
+    "role": "NGO"
+  },
+  {
+    "name": "Thiru",
+    "email": "thiru123@gmail.com",
+    "password": "12345",
+    "role": "Admin"
+  },
+  {
+    "name": "Thirumurugan",
+    "email": "thirurolex18@gmail.com",
+    "password": "123456",
+    "role": "Donor"
+  },
+  {
+    "name": "Thirupathi Balaji",
+    "email": "thiru190609@gmail.com",
+    "password": "1234567",
+    "role": "NGO"
+  }
+]

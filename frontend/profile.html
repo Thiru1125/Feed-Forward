@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Profile | FeedForward</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="profile-bg">
+
+<!-- 🔒 LOGIN GUARD -->
+<script>
+  const userData = localStorage.getItem("userProfile");
+  if (!userData) {
+    alert("Please login first");
+    window.location.href = "login.html";
+  }
+</script>
+
+<div class="profile-wrapper">
+  <div class="profile-card">
+
+    <div class="profile-header">
+      <div class="avatar">👤</div>
+      <h2>My Profile</h2>
+      <p class="subtitle">Account Information</p>
+    </div>
+
+    <div class="profile-details">
+      <div class="detail-row">
+        <span>Name</span>
+        <strong id="profileName"></strong>
+      </div>
+
+      <div class="detail-row">
+        <span>Email</span>
+        <strong id="profileEmail"></strong>
+      </div>
+
+      <div class="detail-row">
+        <span>Role</span>
+        <strong id="profileRole" class="role-badge"></strong>
+      </div>
+    </div>
+
+    <!-- 🛡️ ADMIN DASHBOARD BUTTON -->
+    <button
+      id="adminDashboardBtn"
+      class="dashboard-btn"
+      style="display:none"
+      onclick="window.location.href='admin.html'">
+      Go to Admin Dashboard
+    </button>
+
+    <button class="logout-btn" onclick="logoutAdmin()">Logout</button>
+
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+
+<script>
+  /* ================= LOAD PROFILE SAFELY ================= */
+  function loadProfile() {
+    const user = JSON.parse(localStorage.getItem("userProfile"));
+    if (!user) return;
+
+    document.getElementById("profileName").innerText = user.name || "-";
+    document.getElementById("profileEmail").innerText = user.email || "-";
+    document.getElementById("profileRole").innerText = user.role || "-";
+
+    if (user.role === "Admin") {
+      document.getElementById("adminDashboardBtn").style.display = "block";
+    }
+  }
+
+  loadProfile();
+</script>
+
+<!-- 🌟 Custom Popup -->
+<div id="popup" class="popup-overlay">
+  <div class="popup-box">
+    <div id="popupIcon">✔</div>
+    <h3 id="popupTitle">Success</h3>
+    <p id="popupMessage">Done successfully</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+</body>
+</html>
