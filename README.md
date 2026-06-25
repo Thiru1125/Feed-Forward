@@ -69,38 +69,7 @@ frontend/
 
 ---
 
-## Installation
 
-### Clone Repository
-
-```bash
-git clone https://github.com/yourusername/Feed-Forward.git
-```
-
-### Install Dependencies
-
-```bash
-cd backend
-npm install
-```
-
-### Configure Environment Variables
-
-Create a `.env` file inside backend folder and add required configuration values.
-
-### Run Application
-
-```bash
-npm start
-```
-
-Server will start on:
-
-```text
-http://localhost:5000
-```
-
----
 
 ## Future Enhancements
 
